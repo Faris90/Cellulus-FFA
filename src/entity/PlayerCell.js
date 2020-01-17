@@ -166,16 +166,20 @@ PlayerCell.prototype.calcMove = function(x2, y2, gameServer) {
   gameServer.gameMode.onCellMove(x1, y1, this);
   // Check to ensure we're not passing the world border (shouldn't get closer than a quarter of the cell's diameter)
   if (x1 < config.borderLeft + r / 2) {
-    x1 = config.borderLeft + r / 2;
+   // x1 = config.borderLeft + r / 2;
+    gameServer.removeNode(this);
   }
   if (x1 > config.borderRight - r / 2) {
-    x1 = config.borderRight - r / 2;
+//    x1 = config.borderRight - r / 2;
+    gameServer.removeNode(this);
   }
   if (y1 < config.borderTop + r / 2) {
-    y1 = config.borderTop + r / 2;
+ //   y1 = config.borderTop + r / 2;
+    gameServer.removeNode(this);
   }
   if (y1 > config.borderBottom - r / 2) {
-    y1 = config.borderBottom - r / 2;
+  //  y1 = config.borderBottom - r / 2;
+    gameServer.removeNode(this);
   }
   this.position.x = x1 >> 0;
   this.position.y = y1 >> 0;
