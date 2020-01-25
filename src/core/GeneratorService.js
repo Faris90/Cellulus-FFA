@@ -111,10 +111,10 @@ module.exports = class GeneratorService {
         // Spawn if no cells are colliding
         let v = new Entity.Virus(this.gameServer.getWorld().getNextNodeId(), null, pos, this.config.virusStartMass);
                 let y = new Entity.yellowStriker(this.gameServer.getWorld().getNextNodeId(), null, pos, 30);
-        if (this.gameServer.gameMode.ID == 2)
+        if (this.gameServer.gameMode.ID == 2) {
           this.gameServer.addNode(v, "moving");
          this.gameServer.addNode(y, "moving");
-        else {
+        }   else {
           this.gameServer.addNode(v);
          this.gameServer.addNode(y, "moving");
       }
