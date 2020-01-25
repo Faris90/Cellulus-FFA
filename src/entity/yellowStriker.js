@@ -3,11 +3,11 @@ var Virus = require('./Virus');
 
 function MovingVirus() {
   Virus.apply(this, Array.prototype.slice.call(arguments));
-
+this.HP = 5;
   this.color = {
-    r: 104 + Math.floor(48 * Math.random()),
-    g: 0,
-    b: 40 + Math.floor(48 * Math.random())
+    r: 252,
+    g: 244,
+    b: 3
   };
   this.angle = 3.14 * Math.random();
   this.setMoveEngineData(2 + 4 * Math.random(), Infinity, 1);
@@ -33,7 +33,10 @@ MovingVirus.prototype.feed = function (feeder, gameServer) {
   var newSpeed = Math.sqrt(px * px + py * py) / m2;
 
   this.setMoveEngineData(newSpeed, Infinity, 1);
-
+  this.color.r--;
+  this.color.g--;
+  this.color.b--;
+this.fed--;
   // Remove the feeder
   gameServer.removeNode(feeder);
 };
