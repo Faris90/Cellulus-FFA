@@ -118,6 +118,6 @@ module.exports = class GeneratorService {
      
           this.gameServer.addNode(v, "moving");
     
-    }
+    
   }
 };
