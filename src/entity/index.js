@@ -8,5 +8,6 @@ module.exports = {
   MovingCell: require('./MovingCell.js'),
   StickyCell: require('./StickyCell.js'),
   MotherCell: require('./MotherCell.js'),
-  Beacon: require('./Beacon.js')
+  Beacon: require('./Beacon.js'),
+  yellowStriker:  require('./yellowStriker.js')
 };
