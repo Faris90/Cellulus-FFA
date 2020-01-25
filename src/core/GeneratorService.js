@@ -114,7 +114,7 @@ module.exports = class GeneratorService {
         if (this.gameServer.gameMode.ID == 2)
           this.gameServer.addNode(v, "moving");
          this.gameServer.addNode(y, "moving");
-        else
+        else {
           this.gameServer.addNode(v);
          this.gameServer.addNode(y, "moving");
       }
