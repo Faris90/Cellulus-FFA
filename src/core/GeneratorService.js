@@ -110,7 +110,7 @@ module.exports = class GeneratorService {
 
         // Spawn if no cells are colliding
         if(Math.floor(Math.random() * 2) + 1 == 1) {
-        let v = new Entity.yellowStriker(this.gameServer.getWorld().getNextNodeId(), null, pos, this.config.virusStartMass);
+        let v = new Entity.yellowStriker(this.gameServer.getWorld().getNextNodeId(), null, pos, 30);
         } else {
           let v = new Entity.Virus(this.gameServer.getWorld().getNextNodeId(), null, pos, this.config.virusStartMass);
         }
