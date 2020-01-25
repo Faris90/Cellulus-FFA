@@ -117,6 +117,7 @@ module.exports = class GeneratorService {
         }   else {
           this.gameServer.addNode(v);
          this.gameServer.addNode(y, "moving");
+        }
       }
     }
   }
