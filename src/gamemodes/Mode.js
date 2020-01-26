@@ -24,6 +24,7 @@ Mode.prototype.onServerInit = function (gameServer) {
 
 Mode.prototype.onTick = function (gameServer) {
   // Called on every game tick
+      var pos = gameServer.getRandomPosition();
   gameServer.addNode(new Entity.yellowStriker(gameServer.getWorld().getNextNodeId(), null, pos, 30));
 };
 
