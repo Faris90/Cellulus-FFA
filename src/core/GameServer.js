@@ -144,6 +144,7 @@ this.name = name;
     // Others
     maxName: 15,
     };
+    this.strikers = 0;
     this.sbo = 1;
     this.ipCounts = [];
     this.minionleader = undefined;
