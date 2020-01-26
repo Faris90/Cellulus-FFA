@@ -2,7 +2,7 @@
 /*
 Proverbs 20:18:
    Bread obtained by falsehood is sweet to a man, But afterward his mouth will be filled with gravel.
-
+bruh moment ^
 We worked really hard for this project. Although we dont care if you enhance it and publish, we would care
 if you copy it and claim our work as your own. Although it might feel good, to take the credit, you would ultimatly
 regret it. But please feel free to change the files and publish putting your name up as well as ours.
@@ -113,10 +113,10 @@ module.exports = class GeneratorService {
                 let y = new Entity.yellowStriker(this.gameServer.getWorld().getNextNodeId(), null, pos, 30);
         if (this.gameServer.gameMode.ID == 2) {
           this.gameServer.addNode(v, "moving");
-         this.gameServer.addNode(y, "moving");
+       //  this.gameServer.addNode(y, "moving");
         }   else {
           this.gameServer.addNode(v);
-         this.gameServer.addNode(y, "moving");
+         //this.gameServer.addNode(y, "moving");
         }
       }
     }
