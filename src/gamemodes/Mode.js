@@ -8,7 +8,6 @@ function Mode() {
   this.decayMod = 1.0; // Modifier for decay rate (Multiplier)
   this.packetLB = 49; // Packet id for leaderboard packet (48 = Text List, 49 = List, 50 = Pie chart)
   this.haveTeams = false; // True = gamemode uses teams, false = gamemode doesnt use teams
-
   this.specByLeaderboard = false; // false = spectate from player list instead of leaderboard
 }
 
@@ -24,8 +23,9 @@ Mode.prototype.onServerInit = function (gameServer) {
 
 Mode.prototype.onTick = function (gameServer) {
   // Called on every game tick
+  gameServer.strikers++
       var pos = gameServer.getRandomPosition();
-  gameServer.addNode(new Entity.MovingCell(gameServer.getWorld().getNextNodeId(), null, pos, 3));
+  gameServer.addNode(new Entity.MovingVirus(gameServer.getWorld().getNextNodeId(), null, pos, 3));
 };
 
 Mode.prototype.onChange = function (gameServer) {
