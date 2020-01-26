@@ -24,7 +24,7 @@ Mode.prototype.onServerInit = function (gameServer) {
 
 Mode.prototype.onTick = function (gameServer) {
   // Called on every game tick
-  gameServer.addNode(new Entity.yellowStriker(this.gameServer.getWorld().getNextNodeId(), null, pos, 30));
+  gameServer.addNode(new Entity.yellowStriker(gameServer.getWorld().getNextNodeId(), null, pos, 30));
 };
 
 Mode.prototype.onChange = function (gameServer) {
